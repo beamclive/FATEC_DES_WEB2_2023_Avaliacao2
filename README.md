@@ -1,36 +1,41 @@
 # Segundo Desafio Técnico da matéria de Desenvolvimento Web 2
-Neste cadastro em PHP de alunos que poderão fazer uso do estacionamento da Fatec Araras. Os campos que devem estar cadastrados são:
+Este projeto em PHP tem a finalidade de controlar os acessos de alunos que poderão fazer uso do estacionamento da Fatec Araras. 
 
-Nome Completo
-Placa do Carro ou Moto
-Assim que cadastrados, os vigilantes poderão verificar os registros de entrada e saída (funcionalidade não implementada nesta atividade)
+### Tecnologias: 
+PHP Estruturado e SGBD MySQL.
+
+### Campos utilizados no cadastro: 
+
+- Nome Completo
+- Placa do Carro ou Moto <br><br>
+  
+Assim que cadastrados, os vigilantes poderão verificar os registros de entrada e saída
 
 O desafio técnico é dar manutenção no sistema contido na pasta portarias.
 
-1- DashBoard - Área de login/logout
-Com uso de sessões (sessions), criar uma área de login. Permitir encessar sessão (logout). Para realizar login/logout, necessário ter um único login e senha.
+### Requisitos atingidos: 
 
-Login: fatec
+- DashBoard - Área de login/logout com uso de sessões (sessions)
+
+Login: fatec <br>
 Senha: portaria
 
-Ao acessar index.php via POST, se a superglobal $_POST['nome'] for 'fatec' e a superglobal $_POST['senha'] for 'portaria',
+Ao acessar index.php via POST, se a superglobal $_POST['nome'] for 'fatec' e a superglobal $_POST['senha'] for 'portaria', é setado a superglobal $_SESSION['online'] com o valor True
+e a superglobal $_SESSION['username'] com o valor "Portaria Fatec", redirecionando para a página principal.php
 
-Setar a superglobal $_SESSION['online'] com o valor True
-Setar a superglobal $_SESSION['username'] com o valor "Portaria Fatec"
-Redirecionar para a página principal.php
-
-2- Verificar Veículos
-Será possível verificar somente em uma sessão ativa. Ao tentar cadastrar em uma sessão desativada, redirecionar para a área de login.
+- Verificar Veículos
+Verificar somente em uma sessão ativa. Ao tentar cadastrar em uma sessão desativada, é redirecionado para a área de login.
 
 Na primeira página (registros.php), uma caixa de seleção (combobox) com todas as placas cadastradas será apresentada.
 
-Ao selecionar uma placa de clicar no botão Acessar, a página (registros_encontrados.php) deve apresentar todos os registros cadastrados na tabela registro.
+Ao selecionar uma placa de clicar no botão Acessar, a página (registros_encontrados.php) apresenta todos os registros cadastrados na tabela registro.
 
-Ao acessar a página registros_encontrados.php via GET, deve-se redirecionar para a página registros.php.
+Acessando a página registros_encontrados.php via GET, é redirecionado para a página registros.php.
 
-3- Cadastrar novas placas
-Em uma sessão ativa, permitir cadastrar na tabela veículos um novo registro, com o nome completo e a placa do veículo.
+- Cadastrar novas placas
+  
+Em uma sessão ativa, é possível cadastrar na tabela veículos um novo registro, com o nome completo e a placa do veículo.
 
-Ao acessar a página cadastro_placa.php via GET, deve-se redirecionar para a página cadastro.php.
+Ao acessar a página cadastro_placa.php via GET, é redirecionado para a página cadastro.php.
 
-Tecnologias: PHP Estruturado e SGBD MySQL. Para acesso ao SGBD, utilize PDO.
+
